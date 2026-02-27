@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parkolóház Díjkalkulátor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="app">
+        <h1>🚗 Parkolóház Díjkalkulátor</h1>
+
+        <form id="parkingForm" class="card">
+
+            <div class="field">
+                <label>📍 Parkolási zóna</label>
+                <select id="zona">
+                    <option value="A">Prémium zóna – 4000 Ft / óra</option>
+                    <option value="B">Gazdaságos szint – 1000 Ft / óra</option>
+                    <option value="C">Méygarázs B1 – 900 Ft / óra</option>
+                    <option value="D">Méygarázs B2 - 800 Ft / óra</option>
+                    <option value="E">Központi zóna - 700 Ft / óra</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>🚙 Jármű típusa</label>
+                <select id="jarmu">
+                    <option value="szemelyauto">Személyautó</option>
+                    <option value="teherauto">Teherautó (+20%)</option>
+                    <option value="kisbusz">Kisbusz (+10%)</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>⏱ Parkolási idő</label>
+                <div class="time-box">
+                    <input type="number" id="ora" min="0" placeholder="Óra">
+                    <input type="number" id="perc" min="0" max="59" placeholder="Perc">
+                </div>
+            </div>
+
+            <div class="field checkbox">
+                <input type="checkbox" id="berlet">
+                <label for="berlet">Bérletes kedvezmény (10%)</label>
+            </div>
+
+            <button type="submit" class="btn">💳 Díj számítása</button>
+
+        </form>
+
+        <div id="eredmeny"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
